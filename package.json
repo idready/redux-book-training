@@ -1,0 +1,9 @@
+{
+  "name": "redux-books",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "parcel": "^1.9.7"
+  }
+}
