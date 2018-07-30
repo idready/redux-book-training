@@ -29,7 +29,6 @@ const reducer = (state, action) => {
     }
 };
 
-
 document.onreadystatechange = function () {
     if (document.readyState == "interactive") {
         subscribe(updateView);
