@@ -19,10 +19,10 @@ const reducer = (state, action) => {
     switch(action) {
 
         case 'INC':
-            return {counter: state.counter + 1}; //@TODO: Fix es6
+            return {...state, counter: state.counter + 1};
 
         case 'DEC':
-            return {counter: state.counter - 1};
+            return {...state, counter: state.counter - 1};
 
         default:
             return state;

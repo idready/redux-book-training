@@ -5,5 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "parcel": "^1.9.7"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0"
   }
 }
