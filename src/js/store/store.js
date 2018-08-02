@@ -2,12 +2,7 @@
 import { createStore } from 'redux';
 import { rootReducer } from '../reducers/root';
 
-const initialState = {
-    recipes: [],
-    ingredients: []
-};
-
-export const store = createStore(rootReducer, initialState);
+export const store = createStore(rootReducer);
 
 // Playground
 window.store = store;

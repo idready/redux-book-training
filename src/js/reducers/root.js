@@ -1,26 +1,14 @@
 
-import { ACTION_TYPES } from '../actions/types';
+import { recipesReducer } from './recipes';
+import { ingredientsReducer } from './ingredients';
 
-export const rootReducer = (state, action) => {
+export const rootReducer = (state = {}, action) => {
 
-    const new_state = {...state};
-
-    switch(action.type) {
-        
-        case ACTION_TYPES.ADD_RECIPE:
-
-            new_state.recipes.push({name: action.name});
-        break;
-
-        case ACTION_TYPES.ADD_INGREDIENT:
-
-            const {recipe, name, quantity} = action;
-            new_state.ingredients.push({recipe: recipe, name: name, quantity: quantity});
-        break;
-
-        default:
-        break;
-    }
+    const new_state = {
+        ...state,
+        recipes: recipesReducer(state.recipes, action),
+        ingredients: ingredientsReducer(state.ingredients, action),
+    };
 
     return new_state;
 };
