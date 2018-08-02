@@ -1,5 +1,5 @@
 
-import { ADD_INGREDIENTS } from '../constants/actionTypes';
+import { ADD_INGREDIENT } from '../constants/actionTypes';
 
 export const addIngredient = (recipe, name, quantity) =>
     ({type: ADD_INGREDIENT, recipe, name, quantity});
