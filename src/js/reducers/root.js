@@ -1,16 +1,24 @@
 
+
+import { combineReducers } from 'redux';
 import { recipesReducer } from './recipes';
 import { ingredientsReducer } from './ingredients';
 
-export const rootReducer = (state = {}, action) => {
+export const rootReducer = combineReducers({
+    recipes: recipesReducer,
+    ingredients: ingredientsReducer
+});
 
-    const new_state = {
-        ...state,
-        recipes: recipesReducer(state.recipes, action),
-        ingredients: ingredientsReducer(state.ingredients, action),
-    };
+// Version without *** combineReducers ***
+// export const rootReducer = (state = {}, action) => {
 
-    return new_state;
-};
+//     const new_state = {
+//         ...state,
+//         recipes: recipesReducer(state.recipes, action),
+//         ingredients: ingredientsReducer(state.ingredients, action),
+//     };
+
+//     return new_state;
+// };
 
 // export default rootReducer; @ Why doesn't this work ? 

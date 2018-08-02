@@ -1,8 +1,8 @@
 
-import { ACTION_TYPES } from './types';
+import { ADD_RECIPE } from '../constants/actionTypes';
 
 export const addRecipe = (name) => ({
-    type: ACTION_TYPES.ADD_RECIPE,
+    type: ADD_RECIPE,
     name
 });
 
