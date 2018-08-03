@@ -21,7 +21,6 @@ const handleAdd = () => {
     if ($recipeName.val()) {
         store.dispatch( addRecipe($recipeName.val()) );
         $recipeName.val('');
-        console.log(window.store.getState());
     }
 };
 
